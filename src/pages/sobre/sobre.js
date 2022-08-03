@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import {useParams} from 'react-router-dom'
+import {useParams , useNavigate} from 'react-router-dom'
 
 import api from "../../services/api";
 
 function Sobre() {
   const {id} = useParams();
+  const navgate = useNavigate();
   const [filme, setFilme] = useState({});
   const [loading , setLoading] = useState(true);
 
@@ -16,10 +17,31 @@ function Sobre() {
       }}).then((response)=>{
         setFilme(response.data)
         setLoading(false)
-      }).catch(console.log("não carregou"))
+      }).catch(()=>{
+        navgate("/", {replace: true})
+      })
     }
     loadFilme();
-  },[])
+
+  },[id,navgate])
+
+  function salvar(){
+    const minhaLista = localStorage.getItem('@meusFilmes');
+    let filmesSalvos = JSON.parse(minhaLista) || [];
+
+    const hasFilme = filmesSalvos.some((listaFilmes)=>listaFilmes.id === filme.id)
+
+    if(hasFilme){
+      alert("essse filme já está na lista")
+      return
+    }else{
+      filmesSalvos.push(filme);
+      localStorage.setItem("@meusFilmes", JSON.stringify(filmesSalvos))
+      alert("filme salvo com sucesso")
+    }
+
+    
+  }
 
   if(loading){
     return(
@@ -34,6 +56,11 @@ function Sobre() {
         <h4>{filme.overview}</h4>
         <span>{filme.overview}</span>
         <strong>{filme.vote_average}</strong>
+        <div>
+          <button  onClick={salvar}>salvar</button>
+          <a target={"_blank"} rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} trailler`}><button>trailler</button></a>
+          
+        </div>
       </div>
     );
   }
