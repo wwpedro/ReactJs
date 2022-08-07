@@ -1,0 +1,66 @@
+.titulo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 5%;
+    color: #fff;
+}
+
+
+.secao{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+.secao span{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    color: #fff;
+}
+
+.celula{
+    background-color: #fff;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    border-radius: 40px;
+}
+
+.imagem{
+    background-color: black;
+    width: 60%;
+    height: 200px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.imagem img{
+    width: 100%;
+    height: 200px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    object-fit: cover;
+}
+
+.conteudo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.botoes{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
