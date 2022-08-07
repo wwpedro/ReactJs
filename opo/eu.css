@@ -32,14 +32,35 @@ body{
 }
 
 .banner{
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     height: 500px;
     width: 100%;
+    background-image: url("https://www.venturashopping.com.br/wp-content/uploads/2021/10/Banner_Cinema.png");
 }
 
-.banner img{
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
+.banner h1{
+    margin-top: 0;
+    background-color: #383838;
+    padding: 50px;
+    padding-right: 200px;
+    padding-left: 200px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 2s;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+body:hover .banner h1{
+    background-color: #ffffff;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: 2s;
 }
 
 .filmes{
@@ -104,12 +125,24 @@ body{
     align-items: center;
     justify-content: center;
     display: flex;
+    height: 450px;
+}
+
+.sobre:hover .logo{
     margin-top: 50px;
+    transition: 1s;
+}
+
+.sobre:hover .sobretexto{
+    margin-top: 50px;
+    transition: 1s;
+    background-color: #fff;
 }
 
 .logo{
-    
+    margin-top: -100px;
     margin-right: 20px;
+    transition: 1s;
 }
 
 .logo img{
@@ -118,6 +151,7 @@ body{
 }
 
 .sobretexto{
+    margin-top: -100px;
     background-color: gray;
     width: 60%;
     height: 200px;
@@ -126,6 +160,7 @@ body{
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: 1s;
 }
 
 .rodape{

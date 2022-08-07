@@ -1,0 +1,108 @@
+.quadro{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.esquerdo{
+    width: 50%;
+    height: 597px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.baner{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 0%;
+    margin-left: 30%;
+    margin-top: 0%;
+    transition: 1s;
+}
+
+body:hover .baner{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 100%;
+    margin-left: 30%;
+    margin-top: 0%;
+    transition: 1s;
+}
+
+
+
+.esquerdo img{
+    width: 50%;
+    height: 500px;
+    margin-top: 5%;
+    margin-left: -30%;
+}
+
+.direito{
+    width: 50%;
+    height: 100%;
+}
+
+.tiuloDetalhe{
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sinopse{
+    margin: 5%;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.avaliacao{
+    margin-left: 5%;
+    color: #fff;
+}
+
+.botoesDetalhe{
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.botoesDetalhe button{
+    margin-inline: 5%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #383838 #0f0f0f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0f0f0f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #383838;
+    border-radius: 8px;
+    border: 1px none #292929;
+  }

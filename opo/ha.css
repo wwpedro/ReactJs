@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carregando{
+    margin-top: 20%;
+    animation: is-roating 1s infinite;
+    border: 6px solid white;
+    border-top-color: black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes is-roating{
+    to{
+        transform: rotate(1turn);
+    }
+}

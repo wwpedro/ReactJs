@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
 import {useParams , useNavigate} from 'react-router-dom'
+import Carregando from "../../components/carregar";
+
+import "./sobre.css";
 
 import api from "../../services/api";
+
 
 function Sobre() {
   const {id} = useParams();
@@ -45,23 +49,36 @@ function Sobre() {
 
   if(loading){
     return(
-      <h2>Carregando...</h2>
+      <Carregando></Carregando>
     )
   }
     return (
-      <div>
-        <h2>{filme.title}</h2>
-        <img src={`https://image.tmdb.org/t/p/w500/${filme.backdrop_path}`} />
-        <br></br>
-        <h4>{filme.overview}</h4>
-        <span>{filme.overview}</span>
-        <strong>{filme.vote_average}</strong>
-        <div>
-          <button  onClick={salvar}>salvar</button>
-          <a target={"_blank"} rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} trailler`}><button>trailler</button></a>
-          
+        <div class="quadro">
+
+          <div class="esquerdo">
+            <div class="baner"></div>
+            <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} />
+          </div>
+
+          <div class="direito">
+            <div class="tiuloDetalhe">
+              <h1>{filme.title}</h1>
+            </div>
+            <div class="sinopse">
+              <h4>{filme.overview}</h4>
+            </div>
+            <div class="avaliacao">
+              <strong>{filme.vote_average}</strong>
+            </div>
+            <div class="botoesDetalhe">
+              <button  onClick={salvar}>salvar</button>
+              <a target={"_blank"} rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} trailler`}>
+                <button>trailler</button>
+              </a>
+            </div>
+          </div>
+
         </div>
-      </div>
     );
   }
   

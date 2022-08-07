@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import {Link} from 'react-router-dom';
 import "./home.css";
+import Carregando from "../../components/carregar";
 
 function Home() {
     const [filmes , setFilmes] = useState([]);
@@ -30,25 +31,51 @@ function Home() {
 
     if(load){
       return(
-        <h2>Carregando...</h2>
+        <Carregando></Carregando>
       )
     }
 
     return (
-      <div className="container">
-        <div className="lista-filmes">
-          {filmes.map((filme)=>{
-            return(
-              <article key={filme.id}>
-                <img src="" />
-                <strong>{filme.title}</strong>
-                <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} />
-                <Link to={`/sobre/${filme.id}`}>Ver Mais</Link>
-              </article>
-            )
-          })}
+      <div className="pagina">
+        <div class="banner">
+          <h1>Filmes</h1>
         </div>
-      </div>
+    
+        <div class="filmes">
+            <div class="titulo"><h2>Em Cartaz</h2></div>
+            <div class="filme">
+              {filmes.map((filme)=>{
+                    return(
+                      <article key={filme.id}>
+                        <div class="filme1">
+                          <div class="imagemfilme">
+                            <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} />
+                          </div>
+                          <h3><Link to={`/sobre/${filme.id}`}>Ver Mais</Link></h3>
+                        </div>
+                      </article>
+                    )
+                  })}
+            </div>
+        </div>
+
+        <div class="sobreCine">
+            <div class="logoCine">
+                <img src={"https://static.vecteezy.com/system/resources/previews/004/796/030/original/illustration-graphic-of-popcorn-logo-free-vector.jpg"} />
+            </div>
+            <div class="sobretexto">
+                <h2>
+                    este site é feito para você que quer assitir um filme atual e legal
+                    na noite é importante saber que voce pode secole ro melhhor para voce
+                    vendo os detalhes e trailler.                
+                </h2>
+            </div>
+        </div>
+
+        <div class="rodape">
+
+        </div>
+    </div>
     );
   }
   

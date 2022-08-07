@@ -1,0 +1,16 @@
+.carregando{
+    margin-top: 20%;
+    margin-left: 50%;
+    animation: is-roating 1s infinite;
+    border: 6px solid white;
+    border-top-color: black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes is-roating{
+    to{
+        transform: rotate(1turn);
+    }
+}

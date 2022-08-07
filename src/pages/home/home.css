@@ -1,40 +1,160 @@
-.lista-filmes{
-    max-width: 800px;
-    margin: 14px auto;
-}
-
-.lista-filmes article{
-    width: 100%;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-.lista-filmes strong{
-    margin-bottom: 14px;
-    text-align: center;
-    font-size: 22px;
-    display: block;
-}
-
-.lista-filmes img{
-    width: 900px;
-    max-width: 100%;
-    max-height: 340px;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.lista-filmes a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    font-size: 24px;
-    background-color: #116FEB;
-    text-decoration: none;
-    color: #fff;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
+.banner{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      height: 500px;
+      width: 100%;
+      background-image: url("https://www.venturashopping.com.br/wp-content/uploads/2021/10/Banner_Cinema.png");
+  }
+  
+.banner h1{
+      margin-top: 0;
+      background-color: #383838;
+      padding: 50px;
+      padding-right: 200px;
+      padding-left: 200px;
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      transition: 2s;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+  
+body:hover .banner h1{
+      background-color: #ffffff;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transition: 2s;
+  }
+  
+.filmes{
+     padding: 30px; 
+     padding-right: 0PX;
+  }
+  
+.titulo{
+      margin-top: 10;
+      padding-bottom: 30;
+      font-size: 25px;
+      color: #fff;
+  }
+  
+  .filme{
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      overflow: auto;
+  }
+  
+  .filme1{
+      width: 300px;
+      margin-right: 30px;
+  }
+  
+  .filme1 img{
+      width: 300px;
+      margin-right: 30px;
+  
+  }
+  
+  .filme1 h3{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5;
+      padding: 10px 0;
+      font-size: 24px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      width: 100%;
+      transition: 0.2s;
+  }
+  
+  .filme1 h3:hover{
+      transition: 0.2s;
+      color: rgb(255, 255, 255);
+      background-color: #000000;
+      cursor: pointer;
+  }
+  
+  .sobreCine{
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      height: 450px;
+      width: 100%;
+      background-color: #0f0f0f;
+  }
+  
+  .sobreCine:hover .logoCine{
+      margin-top: 50px;
+      transition: 1s;
+  }
+  
+  .sobreCine:hover .sobretexto{
+      margin-top: 50px;
+      transition: 1s;
+      background-color: #fff;
+  }
+  
+  .logoCine{
+      margin-top: -100px;
+      margin-right: 20px;
+      transition: 1s;
+  }
+  
+  .logoCine img{
+      border-radius: 50%;
+      width: 300px;
+  }
+  
+  .sobretexto{
+      margin-top: -100px;
+      background-color: gray;
+      width: 60%;
+      height: 200px;
+      border-radius: 10px;
+      padding-inline: 5%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: 1s;
+  }
+  
+  .rodape{
+      margin-top: 100px;
+      width: 100%;
+      height: 100px;
+      background-color: #000000;
+  }
+  
+  
+  /* ===== Scrollbar CSS ===== */
+    /* Firefox */
+    * {
+      scrollbar-width: auto;
+      scrollbar-color: #383838 #0f0f0f;
+    }
+  
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    *::-webkit-scrollbar-track {
+      background: #0f0f0f;
+    }
+  
+    *::-webkit-scrollbar-thumb {
+      background-color: #383838;
+      border-radius: 8px;
+      border: 1px none #292929;
+    }
