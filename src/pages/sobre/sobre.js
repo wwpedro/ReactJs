@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import {useParams , useNavigate} from 'react-router-dom'
 import Carregando from "../../components/carregar";
+import {toast} from "react-toastify"
 
 import "./sobre.css";
 
@@ -36,12 +37,12 @@ function Sobre() {
     const hasFilme = filmesSalvos.some((listaFilmes)=>listaFilmes.id === filme.id)
 
     if(hasFilme){
-      alert("essse filme já está na lista")
+      toast.warn("essse filme já está na lista")
       return
     }else{
       filmesSalvos.push(filme);
       localStorage.setItem("@meusFilmes", JSON.stringify(filmesSalvos))
-      alert("filme salvo com sucesso")
+      toast.success("filme salvo com sucesso")
     }
 
     
@@ -53,24 +54,24 @@ function Sobre() {
     )
   }
     return (
-        <div class="quadro">
+        <div className="quadro">
 
-          <div class="esquerdo">
-            <div class="baner"></div>
+          <div className="esquerdo">
+            <div className="baner"></div>
             <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} />
           </div>
 
-          <div class="direito">
-            <div class="tiuloDetalhe">
+          <div className="direito">
+            <div className="tiuloDetalhe">
               <h1>{filme.title}</h1>
             </div>
-            <div class="sinopse">
+            <div className="sinopse">
               <h4>{filme.overview}</h4>
             </div>
-            <div class="avaliacao">
-              <strong>{filme.vote_average}</strong>
+            <div className="avaliacao">
+              <strong>Avaliação: {filme.vote_average}</strong>
             </div>
-            <div class="botoesDetalhe">
+            <div className="botoesDetalhe">
               <button  onClick={salvar}>salvar</button>
               <a target={"_blank"} rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} trailler`}>
                 <button>trailler</button>

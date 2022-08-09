@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
 }
 
 .erro h1{
@@ -17,7 +18,22 @@
     justify-content: center;
     padding: 10px;
     margin-top: 10px;
-    background-color: #116FEB;
+    background-color: #ffffff;
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.erro a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #000000;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 1s;
 }

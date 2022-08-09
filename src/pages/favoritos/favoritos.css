@@ -58,9 +58,66 @@
     margin-left: 10%;
 }
 
+.conteudo h1{
+    margin-left: -10px;
+}
+
 .botoes{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding: 10px;
+}
+
+.botoes button{
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    background-color: rgb(97, 0, 0);
+    color: #fff;
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.botoes a button{
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: -15px;
+    padding-left: -15px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.botoes button:hover{
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    background-color: rgb(218, 0, 0);
+    color: #fff;
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.botoes a button:hover{
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: -15px;
+    padding-left: -15px;
+    padding: 10px;
+    background-color: rgb(102, 102, 102);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }

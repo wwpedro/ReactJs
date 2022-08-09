@@ -36,19 +36,19 @@ function Home() {
     }
 
     return (
-      <div className="pagina">
-        <div class="banner">
+      <div classNameName="pagina">
+        <div className="banner">
           <h1>Filmes</h1>
         </div>
     
-        <div class="filmes">
-            <div class="titulo"><h2>Em Cartaz</h2></div>
-            <div class="filme">
+        <div className="filmes">
+            <div className="tituloHome"><h2>Em Cartaz</h2></div>
+            <div className="filme">
               {filmes.map((filme)=>{
                     return(
                       <article key={filme.id}>
-                        <div class="filme1">
-                          <div class="imagemfilme">
+                        <div className="filme1">
+                          <div className="imagemfilme">
                             <img src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} />
                           </div>
                           <h3><Link to={`/sobre/${filme.id}`}>Ver Mais</Link></h3>
@@ -59,20 +59,20 @@ function Home() {
             </div>
         </div>
 
-        <div class="sobreCine">
-            <div class="logoCine">
+        <div className="sobreCine">
+            <div className="logoCine">
                 <img src={"https://static.vecteezy.com/system/resources/previews/004/796/030/original/illustration-graphic-of-popcorn-logo-free-vector.jpg"} />
             </div>
-            <div class="sobretexto">
+            <div className="sobretexto">
                 <h2>
-                    este site é feito para você que quer assitir um filme atual e legal
-                    na noite é importante saber que voce pode secole ro melhhor para voce
+                    PipocaFlix é um site feito para você que quer saber mais sobre filmes em lançamento,
+                    por isso é importante saber todas as novidades
                     vendo os detalhes e trailler.                
                 </h2>
             </div>
         </div>
 
-        <div class="rodape">
+        <div className="rodape">
 
         </div>
     </div>

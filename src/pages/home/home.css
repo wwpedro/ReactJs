@@ -34,7 +34,7 @@ body:hover .banner h1{
      padding-right: 0PX;
   }
   
-.titulo{
+.tituloHome{
       margin-top: 10;
       padding-bottom: 30;
       font-size: 25px;
@@ -69,19 +69,31 @@ body:hover .banner h1{
       padding: 10px 0;
       font-size: 24px;
       background-color: #ffffff;
-      text-decoration: none;
       color: rgb(0, 0, 0);
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
       width: 100%;
       transition: 0.2s;
   }
-  
+
+  .filme1 h3 a{
+    text-decoration: none;
+    text-decoration-style: none;
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+  }
+
   .filme1 h3:hover{
       transition: 0.2s;
       color: rgb(255, 255, 255);
       background-color: #000000;
       cursor: pointer;
+      text-decoration: none;
+  }
+
+  .filme1 h3:hover a{
+    transition: 0.2s;
+    color: rgb(255, 255, 255);
   }
   
   .sobreCine{
@@ -91,7 +103,7 @@ body:hover .banner h1{
       display: flex;
       height: 450px;
       width: 100%;
-      background-color: #0f0f0f;
+      background-color: rgb(17, 17, 17);
   }
   
   .sobreCine:hover .logoCine{

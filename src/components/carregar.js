@@ -2,7 +2,7 @@ import './carregar.css';
 
 function Carregando() {
     return (
-        <div class="carregando"></div>
+        <div className="carregando"></div>
     );
   }
   

@@ -4,7 +4,7 @@ import './header.css';
 function Header() {
     return (
       <header>
-        <Link className='logo' to="/">PrimeFlix</Link>
+        <Link className='logo' to="/">PipocaFlix</Link>
         <Link className='sobre' to="/favoritos">Meus Filmes</Link>
       </header>
     );
